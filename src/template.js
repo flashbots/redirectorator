@@ -4,7 +4,7 @@ export const redirectTemplate = (message, redirectUrl, status) => `
 <head>
     <title>Service Notice</title>
     <script>
-        let count = 3;
+        let count = 5;
         document.addEventListener('DOMContentLoaded', () => {
             const messageEl = document.getElementById('message');
             const interval = setInterval(() => {
@@ -37,7 +37,7 @@ export const redirectTemplate = (message, redirectUrl, status) => `
 <body>
     <div class="notice">
         <h1>Service Notice</h1>
-        <p id="message">${message} Redirecting in 3 seconds...</p>
+        <p id="message">${message} Redirecting in 5 seconds...</p>
     </div>
 </body>
 </html>
