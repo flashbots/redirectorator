@@ -1,10 +1,11 @@
-export const redirectTemplate = (message, redirectUrl, status) => `
+export const redirectTemplate = (message, redirectUrl) => `
 <!DOCTYPE html>
 <html>
 <head>
     <title>Service Notice</title>
     <script>
         let count = 5;
+        let message = "${message}";
         document.addEventListener('DOMContentLoaded', () => {
             const messageEl = document.getElementById('message');
             const interval = setInterval(() => {
@@ -13,7 +14,7 @@ export const redirectTemplate = (message, redirectUrl, status) => `
                     clearInterval(interval);
                     window.location.href = "${redirectUrl}";
                 } else {
-                    messageEl.textContent = "${message} Redirecting in " + count + " seconds...";
+                    messageEl.textContent = message + " Redirecting in " + count + " seconds...";
                 }
             }, 1000);
         });
