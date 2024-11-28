@@ -7,4 +7,4 @@ routes = [
 ]
 
 [observability.logs]
-enabled = true
+enabled = false
