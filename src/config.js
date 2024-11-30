@@ -11,7 +11,8 @@ export const config = {
       host: "blocks.flashbots.net",
       path: "/",
       type: "web",
-      message: "This API has been decommissioned. You can visit <a href='https://datasets.flashbots.net'>datasets.flashbots.net</a> for historical data. Join us on the Flashbots forum.",
+      message: "This API has been decommissioned. You can visit <a href='https://datasets.flashbots.net'>datasets.flashbots.net</a> for historical data. Join us at the Flashbots forum.",
+      redirectDelay: 5,
       redirectUrl: "https://collective.flashbots.net/",
       status: 410
     },

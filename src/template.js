@@ -1,20 +1,19 @@
-export const redirectTemplate = (message, redirectUrl) => `
+export const redirectTemplate = (message, redirectUrl, redirectDelay) => `
 <!DOCTYPE html>
 <html>
 <head>
     <title>Service Notice</title>
     <script>
-        let count = 5;
-        let message = "${message}";
+        let count = ${redirectDelay};
         document.addEventListener('DOMContentLoaded', () => {
-            const messageEl = document.getElementById('message');
+            const element = document.getElementById('countdown');
             const interval = setInterval(() => {
                 count--;
                 if (count <= 0) {
                     clearInterval(interval);
                     window.location.href = "${redirectUrl}";
                 } else {
-                    messageEl.textContent = message + " Redirecting in " + count + " seconds...";
+                    element.textContent = count;
                 }
             }, 1000);
         });
@@ -27,6 +26,12 @@ export const redirectTemplate = (message, redirectUrl) => `
             padding: 20px;
             line-height: 1.6;
         }
+        #countdown {
+            display: inline-block;
+            min-width: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
         .notice {
             padding: 20px;
             background-color: #f8f9fa;
@@ -38,7 +43,8 @@ export const redirectTemplate = (message, redirectUrl) => `
 <body>
     <div class="notice">
         <h1>Service Notice</h1>
-        <p id="message">${message} Redirecting in 5 seconds...</p>
+        <p>${message}</p>
+        <p>Redirecting in <span id="countdown">${redirectDelay}</span> seconds...</p>
     </div>
 </body>
 </html>

@@ -27,7 +27,7 @@ export default {
     const isBrowserRequest = acceptHeader.includes('text/html');
 
     if (route.type === 'web' && isBrowserRequest) {
-      return new Response(redirectTemplate(route.message, route.redirectUrl, route.status), {
+      return new Response(redirectTemplate(route.message, route.redirectUrl, route.redirectDelay), {
         status: 200,
         headers: { 'Content-Type': 'text/html' }
       });
