@@ -13,7 +13,7 @@ export const config = {
       type: "web",
       message: "This API has been decommissioned. You can visit datasets.flashbots.net for historical data. Join us on the Flashbots forum.",
       redirectUrl: "https://collective.flashbots.net/",
-      status: 301
+      status: 410
     },
   ]
 };
