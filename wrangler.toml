@@ -8,3 +8,8 @@ routes = [
 
 [observability.logs]
 enabled = false
+
+[vars]
+DEBUG = "false"
+DEFAULT_STATUS = 410
+DEFAULT_REDIRECT_DELAY = 5
