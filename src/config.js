@@ -1,6 +1,22 @@
 export const config = {
   "defaultStatus": 410,
   "hosts": {
+    "suave-alpha.flashbots.net": {
+      routes: [
+        {
+          path: "/",
+          response: {
+            api: {
+              message: "This website has been decommissioned. Please visit writings.flashbots.net and join us at collective.flashbots.net"
+            },
+            web: {
+              message: "This website has been decommissioned. Please join us at the <a href='https://collective.flashbots.net'>Flashbots forum</a> and visit <a href='https://writings.flashbots.net'>writings.flashbots.net</a>.",
+              redirectUrl: "https://writings.flashbots.net/"
+            },
+          },
+        },
+      ]
+    },
     "blocks.flashbots.net": {
       routes: [
         {
