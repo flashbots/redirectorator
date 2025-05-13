@@ -3,7 +3,7 @@ main = "src/worker.js"
 compatibility_date = "2024-01-01"
 
 routes = [
-  { pattern = "blocks.flashbots.net/*", zone_name = "flashbots.net" }
+  { pattern = "blocks.flashbots.net/*", zone_name = "flashbots.net" },
   { pattern = "suave-alpha.flashbots.net/*", zone_name = "flashbots.net" }
 ]
 
