@@ -6,7 +6,7 @@ routes = [
   { pattern = "blocks.flashbots.net/*", zone_name = "flashbots.net" },
   { pattern = "explore.flashbots.net/*", zone_name = "flashbots.net" },
   { pattern = "suave.flashbots.net/*", zone_name = "flashbots.net" },
-  { pattern = "suave-alpha.flashbots.net/*", zone_name = "flashbots.net" }
+  { pattern = "suave-alpha.flashbots.net/*", zone_name = "flashbots.net" },
   { pattern = "transparency.flashbots.net/*", zone_name = "flashbots.net" }
 ]
 
